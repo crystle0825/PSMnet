@@ -23,7 +23,7 @@ parser.add_argument('--datapath', default='/kaggle/input/scene-flow/',
                     help='datapath')
 parser.add_argument('--epochs', type=int, default=10,
                     help='number of epochs to train')
-parser.add_argument('--loadmodel', default='/kaggle/input/pretrained-sceneflow-new',
+parser.add_argument('--loadmodel', default='/kaggle/input/pretrained-sceneflow-new/pretrained_sceneflow_new.tar',
                     help='load model')
 parser.add_argument('--savemodel', default='./trained/',
                     help='save model')
