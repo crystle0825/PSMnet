@@ -19,11 +19,11 @@ parser.add_argument('--maxdisp', type=int, default=192,
                     help='maxium disparity')
 parser.add_argument('--model', default='stackhourglass',
                     help='select model')
-parser.add_argument('--datapath', default='D:/PSMNet/scene_flow/',
+parser.add_argument('--datapath', default='/kaggle/input/scene-flow',
                     help='datapath')
 parser.add_argument('--epochs', type=int, default=10,
                     help='number of epochs to train')
-parser.add_argument('--loadmodel', default='D:/PSMNet/pretrained_sceneflow_new.tar',
+parser.add_argument('--loadmodel', default='/kaggle/input/pretrained-sceneflow-new',
                     help='load model')
 parser.add_argument('--savemodel', default='./trained/',
                     help='save model')
