@@ -21,7 +21,7 @@ parser.add_argument('--model', default='stackhourglass',
                     help='select model')
 parser.add_argument('--datapath', default='/kaggle/input/scene-flow/',
                     help='datapath')
-parser.add_argument('--epochs', type=int, default=10,
+parser.add_argument('--epochs', type=int, default=12,
                     help='number of epochs to train')
 parser.add_argument('--loadmodel', default='/kaggle/input/pretrained-sceneflow-new/pretrained_sceneflow_new.tar',
                     help='load model')
