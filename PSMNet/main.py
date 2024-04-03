@@ -25,7 +25,7 @@ parser.add_argument('--epochs', type=int, default=10,
                     help='number of epochs to train')
 parser.add_argument('--loadmodel', default='/kaggle/input/pretrained-sceneflow-new/pretrained_sceneflow_new.tar',
                     help='load model')
-parser.add_argument('--savemodel', default='./trained/',
+parser.add_argument('--savemodel', default='/kaggle/working/PSMnet/PSMNet/trained/',
                     help='save model')
 parser.add_argument('--no-cuda', action='store_true', default=False,
                     help='enables CUDA training')
