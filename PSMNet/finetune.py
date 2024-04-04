@@ -29,13 +29,13 @@ parser.add_argument('--model', default='stackhourglass',
                     help='select model')
 parser.add_argument('--datatype', default='2015',
                     help='datapath')
-parser.add_argument('--datapath', default='D:/PSMNet/data_scene_flow/training/',
+parser.add_argument('--datapath', default='/kaggle/input/data-scene-flow/training',
                     help='datapath')
 parser.add_argument('--epochs', type=int, default=300,
                     help='number of epochs to train')
-parser.add_argument('--loadmodel', default='./trained/submission_model.tar',
+parser.add_argument('--loadmodel', default='/kaggle/input/checkpoint-11/checkpoint_11.tar',
                     help='load model')
-parser.add_argument('--savemodel', default='./',
+parser.add_argument('--savemodel', default='/kaggle/working/PSMnet/PSMNet/trained/',
                     help='save model')
 parser.add_argument('--no-cuda', action='store_true', default=False,
                     help='enables CUDA training')
@@ -56,11 +56,11 @@ all_left_img, all_right_img, all_left_disp, test_left_img, test_right_img, test_
 
 TrainImgLoader = torch.utils.data.DataLoader(
     DA.myImageFloder(all_left_img, all_right_img, all_left_disp, True),
-    batch_size=2, shuffle=True, num_workers=8, drop_last=False)
+    batch_size=4, shuffle=True, num_workers=8, drop_last=False)
 
 TestImgLoader = torch.utils.data.DataLoader(
     DA.myImageFloder(test_left_img, test_right_img, test_left_disp, False),
-    batch_size=2, shuffle=False, num_workers=4, drop_last=False)
+    batch_size=4, shuffle=False, num_workers=4, drop_last=False)
 
 if args.model == 'stackhourglass':
     model = stackhourglass(args.maxdisp)
