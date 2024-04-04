@@ -29,7 +29,7 @@ parser.add_argument('--model', default='stackhourglass',
                     help='select model')
 parser.add_argument('--datatype', default='2015',
                     help='datapath')
-parser.add_argument('--datapath', default='/kaggle/input/data-scene-flow/training',
+parser.add_argument('--datapath', default='/kaggle/input/data-scene-flow/training/',
                     help='datapath')
 parser.add_argument('--epochs', type=int, default=300,
                     help='number of epochs to train')
